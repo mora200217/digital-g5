@@ -1,0 +1,32 @@
+#! /usr/local/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x7fa2c9804da0 .scope module, "alarma_descarga" "alarma_descarga" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "A";
+    .port_info 1 /INPUT 4 "B";
+    .port_info 2 /OUTPUT 1 "Sa";
+    .port_info 3 /OUTPUT 1 "Sb";
+o0x7fa2c9932008 .functor BUFZ 4, C4<zzzz>; HiZ drive
+L_0x7fa2c9816c20 .functor NOT 4, o0x7fa2c9932008, C4<0000>, C4<0000>, C4<0000>;
+o0x7fa2c9932038 .functor BUFZ 4, C4<zzzz>; HiZ drive
+L_0x7fa2c9816dc0 .functor NOT 4, o0x7fa2c9932038, C4<0000>, C4<0000>, C4<0000>;
+v0x7fa2c9804f10_0 .net "A", 3 0, o0x7fa2c9932008;  0 drivers
+v0x7fa2c9816860_0 .net "B", 3 0, o0x7fa2c9932038;  0 drivers
+v0x7fa2c9816900_0 .net "Sa", 0 0, L_0x7fa2c9816cc0;  1 drivers
+v0x7fa2c98169b0_0 .net "Sb", 0 0, L_0x7fa2c9816e50;  1 drivers
+v0x7fa2c9816a40_0 .net *"_ivl_0", 3 0, L_0x7fa2c9816c20;  1 drivers
+v0x7fa2c9816b30_0 .net *"_ivl_4", 3 0, L_0x7fa2c9816dc0;  1 drivers
+L_0x7fa2c9816cc0 .part L_0x7fa2c9816c20, 0, 1;
+L_0x7fa2c9816e50 .part L_0x7fa2c9816dc0, 0, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "alarma_descarga.v";
