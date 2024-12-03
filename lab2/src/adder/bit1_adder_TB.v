@@ -1,5 +1,5 @@
 `timescale 1ps/1ps
-`include "src/sumador/sumador1bPrimitiva.v"
+`include "src/adder/bit1_adder.v"
 
 module testbench();
 
@@ -10,7 +10,7 @@ module testbench();
     wire Co;
     wire So;
 
-    sumador1bPrimitiva uut (
+    bit1_adder uut (
         .A(A),
         .B(B),
         .Ci(Ci),
@@ -44,7 +44,7 @@ module testbench();
     end
 
     initial begin: TEST_CASE
-        $dumpfile("testbenchSumadorPrimitiva.vcd");
+        $dumpfile("bit1_testbench.vcd");
         $dumpvars(-1, uut);
         #80 $finish; 
     end

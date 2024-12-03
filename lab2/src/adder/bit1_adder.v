@@ -1,4 +1,4 @@
-module sumador1bPrimitiva(A,B,Ci, Co, So);
+module bit1_adder(A,B,Ci, Co, So);
   input A;
   input B;
   input Ci;
