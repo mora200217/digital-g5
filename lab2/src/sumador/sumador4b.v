@@ -5,5 +5,5 @@ module sumador4b (
     input B, 
     output C,
 );
-    
+    sumador1bPrimitiva s1()
 endmodule

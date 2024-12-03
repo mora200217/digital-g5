@@ -3,7 +3,7 @@
 
 module testbench();
 
-    reg battery_tb;
+    reg [3:0] battery_tb;
 
     wire led_tb;
 
@@ -25,7 +25,7 @@ module testbench();
     end
 
     initial begin: TEST_CASE
-        $dumpfile("testbench.vcd");
+        $dumpfile("empty_charge_tb.vcd");
         $dumpvars(-1, uut);
         #60 $finish; 
     end
