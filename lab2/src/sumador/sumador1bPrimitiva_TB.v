@@ -1,5 +1,5 @@
 `timescale 1ps/1ps
-`include "sumador1bPrimitiva.v"
+`include "src/sumador/sumador1bPrimitiva.v"
 
 module testbench();
 
