@@ -94,4 +94,8 @@ Temporary Items
 /build 
 /simulation
 
+*.out 
+*.qpf 
+*.qws 
+*.bak
 
