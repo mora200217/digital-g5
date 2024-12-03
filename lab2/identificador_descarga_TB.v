@@ -17,12 +17,16 @@ module testbench();
         battery_tb = 4'b0001;
         #10;
         battery_tb = 4'b0000;
+        #10;
+        battery_tb = 4'b1011;
+        #10;
+        battery_tb = 4'b1111;
     end
 
     initial begin: TEST_CASE
         $dumpfile("testbench.vcd");
         $dumpvars(-1, uut);
-        #20 $finish; 
+        #40 $finish; 
     end
 
 endmodule
