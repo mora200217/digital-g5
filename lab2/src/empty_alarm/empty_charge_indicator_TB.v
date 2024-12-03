@@ -1,5 +1,5 @@
 `timescale 1ps/1ps
-`include "/Users/amoralesma/Desktop/Digital-G5/lab2/identificador_descarga.v"
+`include "src/empty_alarm/empty_charge_indicator.v"
 
 module testbench();
 
@@ -7,7 +7,7 @@ module testbench();
 
     wire led_tb;
 
-    identificador_descarga uut (
+    empty_charge_indicator uut (
         .X(battery_tb),
         .Y(led_tb)
     );
@@ -21,12 +21,13 @@ module testbench();
         battery_tb = 4'b1011;
         #10;
         battery_tb = 4'b1111;
+        #10;
     end
 
     initial begin: TEST_CASE
         $dumpfile("testbench.vcd");
         $dumpvars(-1, uut);
-        #40 $finish; 
+        #60 $finish; 
     end
 
 endmodule

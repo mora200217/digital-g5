@@ -3,9 +3,9 @@
  * Any changes will be lost if this file is regenerated.
  */
 
-module identificador_descarga (
+module empty_charge_indicator (
   input [3:0]X,
   output Y
 );
-  assign Y = ~(~X[3] & ~X[2] & ~X[1] & ~X[0]);
+  assign Y = (X[3] & X[2] & X[1] & X[0]);
 endmodule
