@@ -1,5 +1,7 @@
 `include "src/adder/bit1_adder.v"
 
+// Sumador de 5 bits con instancias 
+// 
 module bit5_adder (x,y,S);
 
     input [3:0]x; 
