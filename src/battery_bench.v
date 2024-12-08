@@ -16,6 +16,11 @@ module battery_bench (
 wire [4:0] total_battery, total_battery_n; 
 wire [1:0] full_state; // 2 bits 
 
+wire is_emptyA_FPGA; 
+wire is_emptyB_FPGA; 
+
+wire led_state_indicator_FPGA; 
+
 // Intrancias los modulos 
 // bit5_adder adder_uut(battA, battB, total_battery); 
 nbit_adder nadder_uut(battA, battB, total_battery_n);
@@ -25,5 +30,10 @@ empty_charge_indicator indicator_B(battB, is_emptyB);
 
 state_indicator state(total_battery_n, full_state); 
 decod state2leds(full_state, led_state_indicator); 
+
+assign is_emptyA_FPGA = ~(is_emptyA); 
+assign is_emptyB_FPGA = ~(is_emptyB); 
+
+assign led_state_indicator_FPGA = ~(led_state_indicator); 
     
 endmodule
