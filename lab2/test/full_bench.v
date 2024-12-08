@@ -9,8 +9,9 @@ reg [3:0] battB;
 
 wire is_emptyA; 
 wire is_emptyB; 
+wire full_state; 
 
-battery_bench uut(battA, battB, is_emptyA, is_emptyB); 
+battery_bench uut(battA, battB, is_emptyA, is_emptyB, full_state); 
 
 initial begin
     battA = 4'b0111; battB = 4'b0111; 

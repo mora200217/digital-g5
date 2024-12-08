@@ -4,19 +4,15 @@
 `include "src/empty_alarm/empty_charge_indicator.v"
 
 module testbench();
-// Registros de las bateris 4-bits (0 - 15)
-reg [3:0] battA; 
-reg [3:0] battB; 
+reg [3:0] battA, battB; // Registros de las bateris 4-bits (0 - 15)
 
-wire [4:0] total_battery; 
+wire [4:0] total_battery; // Suma de la batería total 
+wire is_emptyA, is_emptyB; // Validacion de descarga completa 
 
-wire is_emptyA; 
-wire is_emptyB; 
-
-// Intrancias los modulos 
+// Instancias los modulos 
 bit5_adder adder_uut(battA, battB, total_battery); 
 
-
+// Indicadores de descara por cada una de las baterías 
 empty_charge_indicator indicator_A(battA, is_emptyA); 
 empty_charge_indicator indicator_B(battB, is_emptyB); 
 

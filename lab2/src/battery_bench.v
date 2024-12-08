@@ -3,8 +3,8 @@
 `include "src/empty_alarm/empty_charge_indicator.v"
 
 module battery_bench (
-    input battA, 
-    input battB, 
+    input [3:0] battA,  
+    input [3:0] battB, 
     output is_emptyA, 
     output is_emptyB, 
     output full_state
