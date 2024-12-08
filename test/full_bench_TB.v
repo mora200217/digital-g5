@@ -12,7 +12,7 @@ wire is_emptyB;
 
 wire full_state; 
 
-battery_bench #(4) battery_bank_uut(battA, battB, is_emptyA, is_emptyB, full_state); 
+battery_bench #(4) battery_bank_uut(battA, battB, is_emptyA, is_emptyB, led_state_indicator); 
 
 initial begin
     battA = 4'b0111; battB = 4'b0111; 
