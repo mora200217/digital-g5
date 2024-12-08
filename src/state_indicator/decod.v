@@ -1,5 +1,4 @@
 // decod.v - One hot encoding 
-
 module decod #(
     parameter N = 4
 )(
