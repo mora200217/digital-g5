@@ -2,7 +2,7 @@
 
 // Sumador de 5 bits con instancias 
 // 
-module bit5_adder (x,y,S);
+module bit4_adder (x,y,S);
 
     input [3:0]x; 
     input [3:0]y;  
