@@ -1,5 +1,5 @@
 // nbit_adder.v - Sumador de n bits 
-`include "src/adder/bit1_adder.v"
+//`include "src/adder/bit1_adder.v"
 
 module nbit_adder #(
     parameter N = 4
@@ -12,8 +12,8 @@ module nbit_adder #(
     wire [N:0] carry; 
     assign carry[0] = 1'b0; 
 
-    generate 
-        for (i = 0; i < N; i = i + 1) begin
+    generate
+        for (i = 0; i < N; i = i + 1) begin : gen
             bit1_adder adder_i(A[i], B[i], carry[i], carry[i + 1], S[i]);
         end 
     endgenerate
