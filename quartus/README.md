@@ -1,2 +1,0 @@
-# Quartus Synthesis 
-
