@@ -17,6 +17,8 @@ Sistema digital para banco de baterías con indicadores de carga. Implementado e
 - Indicador de descarga completa por unidad de batería 
 
 ## Propuesta de solución 
+![solution-diagram](https://github.com/mora200217/digital-g5/blob/main/docs/battery-bank-diagram.svg)
+
 El problema se divide en 3 modulos. 
 1. **Suma de carga:** Entrega la carga total leída en el banco de baterías. 
 2. **Comparador de carga:** 
